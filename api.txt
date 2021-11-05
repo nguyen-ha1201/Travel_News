@@ -1,0 +1,31 @@
+API:
+-/api/news:
+	+(GET) Get all
+	+(GET) /category/category_id/{page}: get all of a category
+	+(GET) /tag/tag_id/{page}: get all of a category
+	+(GET) /related/news_id: read news related
+	+(GET) /news_id : read a news
+
+	+(POST) Create a news
+		- body: pic : multipart
+			title: text
+			short_intro: text
+			content: text
+			author: text
+			cat_id: number
+	+(POST) /news_id : update a news
+		- body: pic: multipart
+			title: text
+			short_intro: text
+			content: text
+			author: text
+			cat_id: number
+	+(DELETE) /news_id : delete a news
+
+-/api/category:
+	+ get all
+-/api/comment:
+	+ /news_id : get all of a news
+-/api/tag:
+	+ Get all
+	+ /news_id : get all of a news
